@@ -1,50 +1,17 @@
 # E01b-Smiles
-An exercise exploring variables and loops using Python Arcade.
+This code is composed of 5 parts, each intended to produce different variations of a "smile" image, and are as follows: 
+* Main1.py
+    In main1.py, a smile should be created by changing the location values of each shape (x,y) to produce a smile image.
+* Main2.py
+    In main2.py, the code establishes a name for the coordinates (face x, face y)
 
-This repository contains several files that you will need to alter to complete the assignment. The instructions for the exercise are also on Canvas.
+* Main3.py
+    In main3.py, the same smile should also be created, but this time it is centered as one complete object by defining the "center" and the location of other parts of the object in relation to that central point (face x, face y)
+* Main4.py
+    In main4.py, a repeating grid of the object should be created by assigning a loop to the values of x and y.
 
-Comments in Python are marked by a # sign (for single-line comments) or three matching quotation marks (''' or """) if a comment requires more than one line. They should also appear in a different color in VS Code. The Python Interpreter ignores comments, so you can safely include any information you want there.
-
-As with your assignments, please edit the LICENSE file (replace the [year] [fullname] with the current year and your name); you will also be expected to edit README.md (this file) to describe what you have accomplished.
-
----
-
-As always, Fork this repository, and then Clone it to your local computer.
-
-Before you begin, you will need to install Python Arcade, the graphics library we will be using for the first half of the semester. Open the Terminal (either by clicking on the magnifying glass and searching for CMD, or open the Terminal in VS Code) and type the following:
-
-*pip install arcade --user*
-
-pip is a tool for downloading and installing Python packages. arcade is the name of the package we will be using. When you type the command, you should see the components it is installing (with corresponding progress bars).
-
-When arcade has been installed, we can get to work:
-
-First, open main1.py. I am drawing several shapes that, if properly assembled, can form a smiley face. Right now, the shapes are all being drawn at (0,0), which is the bottom-left corner of the window. See if you can use those shapes to draw a smiley face in the center of the window. The small gray dots are catch lights for the eyes.
-
-The end result should look something like this:
-
-![Smile!](https://github.com/BL-MSCH-C220-F19/E01b-Smiles/blob/master/smile.png)
-
-When you have placed the shapes correctly, save the file and open main2.py. The only change I have made is to define coordinates (face_x and face_y) that represent the center of the circle. Figure out offsets for the other shapes in relation to face_x and face_y. Use face_x and face_y to move all the shapes to the middle of the window. Save your changes.
-
-Next, in main3.py, I have created several new coordinates to represent each of the shapes: smile, eye1, eye2, catch1, and catch2. Use what you learned in main2.py to define each of those coordinates in relation to face_x and face_y. Move the face to the middle of the window. You should only have to edit lines 13 through 18. Save your changes.
-
-Open main4.py. You will now be drawing many faces in the window. Editing lines 20 through 24, draw a grid of overlapping faces. Now, play with the values on lines 16 and 18. What happens when you adjust those numbers? Save your changes.
-
-When you have completed the exercise, commit your changes and push them back to GitHub. Turn in the URL of your repository on canvas.
-
-*Extra credit:* 
-
-main5.py is much more complicated, but it allows the smiley face to track mouse movements. Add a comment to every line describing what is happening. Save those changes.
-
-If you want to further explore Python Arcade, the API and some sample projects are available at [arcade.academy](http://arcade.academy).
-
----
-
-The grading criteria will be as follows:
-
-* [1 point] Repository contains an appropriate software license
-* [1 point] Repository contains a descriptive README.md
-* [8] Accomplishes the objective of the exercise
-
-10 points total
+* Main5.py
+In main5.py, the object should show up in the middle of the window until the mouse is moved, from which point it should follow the cursor movement by assigning values to three seperate functions:
+    1. __init__ will define what the code needs to do initially (how big the window will be, the window title, background color, and the mouse cursor)
+    2. on_draw will render the image according to the coordinates assigned
+    3. on_mouse_motion will tell the computer that whatever coordinates the mouse is within the window, so too should the values of the self object be
